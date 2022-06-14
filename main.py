@@ -1,4 +1,8 @@
 import requests
+from colorama import Fore, init
+
+init(convert=True)
+
 
 def convert():
 
@@ -17,7 +21,7 @@ def convert():
 
     if 'access_token' in r.text:
         token = r.json()['access_token']
-        print(token)
+        print(Fore.GREEN + token)
     t = open('tokens.txt', 'a')
     t.write(f'{token}\n')
 
