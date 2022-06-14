@@ -18,5 +18,7 @@ def convert():
     if 'access_token' in r.text:
         token = r.json()['access_token']
         print(token)
+    t = open('tokens.txt', 'a')
+    t.write(f'{token}\n')
 
 convert()
