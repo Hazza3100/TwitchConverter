@@ -21,7 +21,7 @@ def convert():
 
     if 'access_token' in r.text:
         token = r.json()['access_token']
-        print(Fore.GREEN + token)
+        print(Fore.GREEN + f"[+] {Fore.RESET}Converted {token}")
     t = open('tokens.txt', 'a')
     t.write(f'{token}\n')
 
